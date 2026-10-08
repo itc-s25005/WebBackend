@@ -1,0 +1,19 @@
+{
+  "name": "node-app",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^7"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/pug": "^2.0.10",
+    "ejs": "^7.0.1",
+    "pug": "^3.0.4",
+    "tailwindcss": "^4.3.3"
+  }
+}

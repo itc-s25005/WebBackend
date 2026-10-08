@@ -1,0 +1,14 @@
+doctype html
+html(lang='ja')
+  head
+    meta(charset='utf-8')
+    title= title
+    link(type='text/css' href='/style.css' rel='stylesheet')
+
+  body.container.mx-auto.px-4
+    header
+      h1.display-4= title
+    main
+      p= content
+      p
+        a(href='/other') Other Pageに移動 >>
