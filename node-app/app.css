@@ -20,3 +20,37 @@ a {
     @apply text-blue-500 underline decoration-blue-500 cursor-pointer
     hover:text-blue-700;
 }
+
+.message-input {
+    @apply block py-1.5 px-3 w-full border-2 border-zinc-200 rounded-md bg-clip-padding
+    bg-white outline-none appearance-none;
+
+}
+
+button[type="submit"] {
+    @apply py-1.5 px-3 border-2 border-blue-500 rounded-md text-white bg-blue-500
+    align-middle transition duration-150 ease-in-out cursor-pointer select-none
+    hover:bg-blue-700;
+}
+
+table {
+    @apply mb-4 w-full border-collapse caption-bottom text-base font-normal
+    normal-case leading-6;
+}
+
+th {
+    @apply p-2 border-b border-gray-200 text-black bg-white text-left
+    font-bold align-top;
+}
+
+td {
+    @apply p-2 border-b border-gray-200 text-black bg-white align-top;
+}
+
+.table-dark {
+    @apply text-white;
+}
+
+.table-dark th, .table-dark td {
+    @apply text-white border-gray-600 bg-gray-800;
+}

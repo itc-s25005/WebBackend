@@ -1,4 +1,5 @@
-doctype html
+include data_item
+doctype
 html(lang='ja')
   head
     meta(charset='utf-8')
@@ -10,5 +11,16 @@ html(lang='ja')
       h1.display-4= title
     main
       p= content
-      p
-        a(href='/other') Other Pageに移動 >>
+      table
+        thead
+          tr
+            td 伝言です！
+        tbody
+          tr
+            td= data.msg
+
+      form(method='post' action='/')
+        .form-group
+          label(for='msg') MESSAGE
+          input#msg.form-control(type='text' name='msg')
+        button(type='submit') 送信

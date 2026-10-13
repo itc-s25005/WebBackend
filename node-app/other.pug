@@ -1,3 +1,4 @@
+include data_item
 doctype
 html(lang='ja')
   head
@@ -10,3 +11,6 @@ html(lang='ja')
       h1.display-4= title
     main
       p= content
+      - let id = 0
+      each val, key in data
+        +dataRow(++id, key, val)
