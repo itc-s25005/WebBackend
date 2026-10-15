@@ -24,7 +24,6 @@ a {
 .message-input {
     @apply block py-1.5 px-3 w-full border-2 border-zinc-200 rounded-md bg-clip-padding
     bg-white outline-none appearance-none;
-
 }
 
 button[type="submit"] {
@@ -53,4 +52,13 @@ td {
 
 .table-dark th, .table-dark td {
     @apply text-white border-gray-600 bg-gray-800;
+}
+
+.form-group label {
+    @apply inline-block cursor-default;
+}
+
+.form-control {
+    @apply block py-1.5 px-3 w-full border border-gray-200 rounded-md bg-clip-padding
+    bg-white cursor-text appearance-none outline-none;
 }

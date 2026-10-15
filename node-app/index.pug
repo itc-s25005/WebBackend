@@ -18,7 +18,7 @@ html(lang='ja')
         tbody
           tr
             td= data.msg
-
+      p your last message: #{cookieData}
       form(method='post' action='/')
         .form-group
           label(for='msg') MESSAGE
