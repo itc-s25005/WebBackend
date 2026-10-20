@@ -1,0 +1,28 @@
+doctype
+html(lang='ja')
+  head
+    meta(charset='utf-8')
+    title ミニメッセージボード
+    link(rel='stylesheet' href='/style.css')
+    script(src='/index.js')
+
+  body
+    header
+      h1 メッセージボード
+
+    main
+      p ※メッセージは最大10個まで保存されます。
+
+      form(method='post' action='/')
+        p#id
+        input#id_input(type='hidden' name='id')
+        .form-group
+          label(for='msg') Message
+          input#msg(type='text' name='msg')
+        button(type='submit') 送信
+
+      table
+        each post in data
+          tr
+            th= post.id
+            td= post.msg
