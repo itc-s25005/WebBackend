@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+
+@import "tailwindcss";
+
+* {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+body {
+    @apply bg-white container mx-auto px-3 antialiased font-normal leading-normal;
+}
+
+.h1, h1 {
+    @apply text-4xl mb-2 font-medium leading-tight;
+}
+
+.h6, h6 {
+    @apply text-base font-medium leading-tight mb-2;
+}
+
+.form-group label {
+    @apply inline-block text-base;
+}
+
+.form-group input[type='text'] {
+    @apply block w-full px-3 py-1.5 appearance-none border border-gray-200 rounded-md
+    transition duration-150 ease-in-out focus:outline-none focus:border-blue-300
+    focus:ring-4 focus:ring-blue-500/25;
+}
+
+button[type='submit'] {
+    @apply bg-blue-500 px-3 py-1.5 border border-blue-600 text-white rounded-md
+    transition duration-150 ease-in-out hover:bg-blue-600 hover:border-blue-700;
+}
