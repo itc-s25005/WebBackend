@@ -4,9 +4,11 @@ import path from 'node:path'
 import cookieParser from 'cookie-parser'
 import logger from 'morgan'
 import debugModule from 'debug'
+import session from 'express-session'
 
 import indexRouter from './routes/index'
 import helloRouter from './routes/hello'
+import newsRouter from './routes/news'
 
 const debug = debugModule('app:server')
 const app = express()
@@ -21,10 +23,19 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
+app.use(session({
+  secret: 'LOrGuHte0nbmzZLMpTW1J64t8LTzNYriWtNapwNev0m+bFvf',
+  resave: false,
+  saveUninitialized: false,
+  cookie: {
+    maxAge: 60 * 60 * 1000
+  }
+}))
 
 // register routes
 app.use('/', indexRouter)
-app.use('/', helloRouter)
+app.use('/hello', helloRouter)
+app.use('/news', newsRouter)
 
 // catch 404 and forward to error handler
 app.use(async (_req: Request, _res: Response, next: NextFunction) => {

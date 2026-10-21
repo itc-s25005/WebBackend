@@ -34,3 +34,15 @@ button[type='submit'] {
     @apply bg-blue-500 px-3 py-1.5 border border-blue-600 text-white rounded-md
     transition duration-150 ease-in-out hover:bg-blue-600 hover:border-blue-700;
 }
+
+ol {
+    @apply ps-8 list-decimal;
+}
+
+a {
+    @apply text-blue-500 transition duration-150 hover:text-blue-700 hover:underline;
+}
+
+
+
+
