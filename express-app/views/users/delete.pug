@@ -1,0 +1,22 @@
+extends ../layout
+
+block content
+  p= content
+  table.show
+    tbody
+      tr
+        th ID
+        td= mydata.id
+      tr
+        th NAME
+        td= mydata.name
+      tr
+        th E-MAIL
+        td= mydata.email
+      tr
+        th AGE
+        td= mydata.age
+
+  form(method='post' action='/users/delete')
+    input(type='hidden' name='id' value=mydata.id)
+    button(type='submit') 削除

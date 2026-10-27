@@ -9,6 +9,7 @@ import session from 'express-session'
 import indexRouter from './routes/index'
 import helloRouter from './routes/hello'
 import newsRouter from './routes/news'
+import usersRouter from './routes/users'
 
 const debug = debugModule('app:server')
 const app = express()
@@ -36,6 +37,7 @@ app.use(session({
 app.use('/', indexRouter)
 app.use('/hello', helloRouter)
 app.use('/news', newsRouter)
+app.use('/users', usersRouter)
 
 // catch 404 and forward to error handler
 app.use(async (_req: Request, _res: Response, next: NextFunction) => {

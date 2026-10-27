@@ -1,0 +1,17 @@
+extends ../layout
+
+block content
+  p= content
+  table.show
+    tbody
+      tr
+        th ID
+        td= mydata.id
+
+      tr
+        th NAME
+        td= mydata.email
+
+      tr
+        th AGE
+        td= mydata.age

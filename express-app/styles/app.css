@@ -24,7 +24,7 @@ body {
     @apply inline-block text-base;
 }
 
-.form-group input[type='text'] {
+input[type='text'], input[type='number'] {
     @apply block w-full px-3 py-1.5 appearance-none border border-gray-200 rounded-md
     transition duration-150 ease-in-out focus:outline-none focus:border-blue-300
     focus:ring-4 focus:ring-blue-500/25;
@@ -43,6 +43,27 @@ a {
     @apply text-blue-500 transition duration-150 hover:text-blue-700 hover:underline;
 }
 
+table {
+    @apply border-collapse bg-white text-black w-full mb-4 align-middle;
+}
 
+tr {
+    @apply border-b border-b-gray-200;
+}
 
+th, td {
+    @apply p-2 text-left;
+}
+
+p {
+    @apply mb-4;
+}
+
+.display-4 {
+    @apply text-5xl font-light;
+}
+
+table.show th {
+    @apply w-1/4;
+}
 

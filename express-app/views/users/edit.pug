@@ -1,0 +1,16 @@
+extends ../layout
+
+block content
+  p= content
+  form(method='post' action='/users/edit')
+    input(type='hidden' name='id' value=mydata.id)
+    .form-group
+      label(for='name') NAME
+      input#name(type='text' name='name' value=mydata.name)
+    .form-group
+      label(for='email') E-MAIL
+      input#email(type='text' name='email' value=mydata.email)
+    .form-group
+      label(for='age') AGE
+      input#age(type='number' name='age' value=mydata.age)
+    button(type='submit') 更新

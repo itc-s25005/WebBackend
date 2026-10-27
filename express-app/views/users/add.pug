@@ -1,0 +1,15 @@
+extends ../layout
+
+block content
+  p= content
+  form(method='post' action='/users/add')
+    .form-group
+      label(for='name') NAME
+      input#name(type='text' name='name')
+    .form-group
+      label(for='email') E-MAIL
+      input#email(type='text' name='email')
+    .form-group
+      label(for='age') AGE
+      input#age(type='number' name='age')
+    button(type='submit') 作成
