@@ -2,14 +2,20 @@ extends ../layout
 
 block content
   p= content
+
+  if errors
+    ul.error
+      each error in errors
+        li= error.msg
+
   form(method='post' action='/users/add')
     .form-group
       label(for='name') NAME
-      input#name(type='text' name='name')
+      input#name(type='text' name='name' value=form.name)
     .form-group
       label(for='email') E-MAIL
-      input#email(type='text' name='email')
+      input#email(type='text' name='email' value=form.email)
     .form-group
       label(for='age') AGE
-      input#age(type='number' name='age')
+      input#age(type='number' name='age' value=form.age)
     button(type='submit') 作成

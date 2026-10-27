@@ -67,3 +67,7 @@ table.show th {
     @apply w-1/4;
 }
 
+ul.error {
+    @apply list-disc text-red-600 ms-8 mb-4;
+}
+
