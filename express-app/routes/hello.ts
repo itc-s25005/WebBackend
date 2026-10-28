@@ -13,7 +13,7 @@ interface PostRequestBody {
   message: string
 }
 
-// /users のパスパラメータの定義
+// /mydata のパスパラメータの定義
 interface UsersParams {
   userId: string
   bookId: string

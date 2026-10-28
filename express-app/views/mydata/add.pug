@@ -8,7 +8,7 @@ block content
       each error in errors
         li= error.msg
 
-  form(method='post' action='/users/add')
+  form(method='post' action='/mydata/add')
     .form-group
       label(for='name') NAME
       input#name(type='text' name='name' value=form.name)

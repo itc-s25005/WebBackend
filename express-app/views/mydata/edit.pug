@@ -2,7 +2,11 @@ extends ../layout
 
 block content
   p= content
-  form(method='post' action='/users/edit')
+  if errors
+    ul.error
+      each error in errors
+        li= error.msg
+  form(method='post' action='/mydata/edit')
     input(type='hidden' name='id' value=mydata.id)
     .form-group
       label(for='name') NAME

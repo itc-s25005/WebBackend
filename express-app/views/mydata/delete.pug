@@ -17,6 +17,6 @@ block content
         th AGE
         td= mydata.age
 
-  form(method='post' action='/users/delete')
+  form(method='post' action='/mydata/delete')
     input(type='hidden' name='id' value=mydata.id)
     button(type='submit') 削除
