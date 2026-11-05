@@ -20,11 +20,15 @@ body {
     @apply text-base font-medium leading-tight mb-2;
 }
 
+form {
+    @apply space-y-3;
+}
+
 .form-group label {
     @apply inline-block text-base;
 }
 
-input[type='text'], input[type='number'] {
+input[type='text'], input[type='number'], input[type='password'] {
     @apply block w-full px-3 py-1.5 appearance-none border border-gray-200 rounded-md
     transition duration-150 ease-in-out focus:outline-none focus:border-blue-300
     focus:ring-4 focus:ring-blue-500/25;
