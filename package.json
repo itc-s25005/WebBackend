@@ -1,0 +1,46 @@
+{
+  "name": "message_board",
+  "module": "app.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "typecheck": "bun check",
+    "watch:app": "bunx --bun nodemon -w . -e ts,pug -x 'bun app.ts'",
+    "watch:css": "bunx --bun tailwindcss --watch=always -m -i ./styles/app.css -o ./public/css/style.css",
+    "watch": "bun run --parallel 'watch:*'"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.5",
+    "@types/bun": "latest",
+    "@types/cookie-parser": "^1.4.10",
+    "@types/debug": "^4.1.13",
+    "@types/express": "^5.0.6",
+    "@types/express-session": "^1.19.0",
+    "@types/http-errors": "^2.0.5",
+    "@types/morgan": "^1.9.10",
+    "@types/pg": "^8.23.1",
+    "@types/pug": "^2.0.10",
+    "flowbite": "^4.0.2",
+    "nodemon": "^3.1.14",
+    "prisma": "^7.10.1",
+    "tailwindcss": "^4.3.5"
+  },
+  "peerDependencies": {
+    "typescript": "^7"
+  },
+  "dependencies": {
+    "@prisma/adapter-pg": "^7.10.1",
+    "@prisma/client": "7",
+    "argon2": "^0.45.2",
+    "cdate": "^0.0.7",
+    "cookie-parser": "^1.4.7",
+    "debug": "^4.4.3",
+    "express": "^5.3.0",
+    "express-session": "^1.19.0",
+    "express-validator": "^7.3.2",
+    "http-errors": "^2.0.1",
+    "morgan": "^1.12.1",
+    "pg": "^8.23.1",
+    "pug": "^3.0.4"
+  }
+}

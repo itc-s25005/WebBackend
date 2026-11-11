@@ -1,0 +1,19 @@
+extends ../layout
+
+block main
+  p.welcome Welcome to #{username}.
+
+  //- あとからメッセージ投稿フォームを設置する
+
+  section.messages
+    table.posts
+      each post in posts
+        tr.post
+          th= post.author.name
+          td= post.message
+          td= dateFormat(post.createdAt)
+
+  //- ページネーション
+  .pagination
+    a(href=`/posts/${page - 1}`).previous-button << prev
+    a(href=`/posts/${page + 1}`).next-button next >>

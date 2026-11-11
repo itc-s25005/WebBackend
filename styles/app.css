@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+
+@import "tailwindcss";
+@import "flowbite/src/themes/default.css";
+
+* {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+body {
+    @apply bg-white container mx-auto px-3 antialiased font-normal leading-normal;
+}
+
+header {
+    @apply mb-3 py-2;
+}
+
+.display-4 {
+    @apply text-5xl font-light;
+}
+
+form.login {
+    @apply max-w-sm mx-auto;
+}
+
+.form-group {
+    @apply mb-5;
+}
+
+label.text-input {
+    @apply block mb-2.5 text-sm font-medium text-heading;
+}
+
+input[type='email'], input[type='password'] {
+    @apply bg-neutral-secondary-medium border border-default-medium text-heading
+    text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3
+    py-2.5 shadow-xs placeholder:text-body;
+}
+
+button[type='submit'] {
+    @apply text-white bg-brand box-border border border-transparent
+    hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs
+    font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none;
+}
+
+ul.error {
+    @apply mt-6 max-w-sm mx-auto space-y-1 text-danger font-semibold
+    list-disc list-inside;
+}
+
+section.messages {
+    @apply relative overflow-x-auto bg-neutral-primary-soft shadow-xs rounded-base
+    border border-default;
+}
+
+table.posts {
+    @apply w-full text-sm text-left rtl:text-right text-body;
+}
+
+tr.post {
+    @apply bg-neutral-primary border-b border-default;
+}
+
+tr.post th {
+    @apply px-6 py-4 font-medium text-heading whitespace-nowrap;
+}
+
+tr.post td {
+    @apply px-6 py-4;
+}
+
+.pagination {
+    @apply flex space-x-2 mt-6 mx-auto justify-center;
+}
+
+a.previous-button, a.next-button {
+    @apply text-body bg-neutral-secondary-medium border border-default-medium
+    hover:bg-neutral-tertiary-medium hover:text-heading shadow-xs font-medium
+    leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none;
+}

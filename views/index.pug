@@ -1,0 +1,18 @@
+extends layout
+
+block main
+  form(method='post' action='/').login
+    .form-group
+      label(for='email').text-input E-Mail
+      input#email(type='email' name='email' placeholder='name@example.com' value=form.email)
+
+    .form-group
+      label(for='password').text-input Password
+      input#password(type='password' name='password' placeholder='●●●●●●●●' value=form.password)
+
+    button(type='submit') ログイン
+
+  if errors
+    ul.error
+      each error in errors
+        li= error.msg
