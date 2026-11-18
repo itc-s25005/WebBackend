@@ -6,10 +6,11 @@ import logger from 'morgan'
 import cookieParser from 'cookie-parser'
 import session from 'express-session'
 import createError, {HttpError} from 'http-errors'
+import {cdate} from 'cdate'
 
 import indexRouter from './routes/index'
 import postsRouter from './routes/posts'
-import {cdate} from 'cdate'
+import apiPostsRouter from './routes/api/posts'
 
 const app = express()
 
@@ -41,6 +42,7 @@ app.locals.dateFormat = (dt:Date) => cdate(dt)
 // register routes
 app.use('/', indexRouter)
 app.use('/posts', postsRouter)
+app.use('/api/posts', apiPostsRouter)
 
 // catch 404 and forward to error handler
 app.use(async (_req: Request, _res: Response, next: NextFunction) => {

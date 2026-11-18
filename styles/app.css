@@ -33,7 +33,7 @@ label.text-input {
     @apply block mb-2.5 text-sm font-medium text-heading;
 }
 
-input[type='email'], input[type='password'] {
+input[type='email'], input[type='password'], input[type='text'] {
     @apply bg-neutral-secondary-medium border border-default-medium text-heading
     text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3
     py-2.5 shadow-xs placeholder:text-body;
@@ -48,6 +48,22 @@ button[type='submit'] {
 ul.error {
     @apply mt-6 max-w-sm mx-auto space-y-1 text-danger font-semibold
     list-disc list-inside;
+}
+
+section.add {
+    @apply my-3;
+}
+
+section.add form {
+    @apply flex flex-row space-x-2;
+}
+
+input[name='msg'] {
+    @apply flex-1;
+}
+
+section.add button[type='submit'] {
+    @apply flex-none;
 }
 
 section.messages {

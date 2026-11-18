@@ -3,13 +3,17 @@ extends ../layout
 block main
   p.welcome Welcome to #{username}.
 
-  //- あとからメッセージ投稿フォームを設置する
+  section.add
+    form(method='post' action='/posts/add')
+      input(type='text' name='msg' placeholder='メッセージ')
+      button(type='submit') ポスト
 
   section.messages
     table.posts
       each post in posts
         tr.post
-          th= post.author.name
+          th
+            a(href=`/posts/user/${post.author.id}`)= post.author.name
           td= post.message
           td= dateFormat(post.createdAt)
 
