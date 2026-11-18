@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  p.h6= content
+  form(method='post' action='/hello/post')
+    .form-group
+      label(for='msg') Message:
+      input#msg(type='text' name='message')
+    button(type='submit') 送信

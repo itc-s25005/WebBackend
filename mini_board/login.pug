@@ -1,0 +1,20 @@
+doctype
+html(lang='ja')
+  head
+    meta(charset='utf-8')
+    title ミニメッセージボード
+    link(rel='stylesheet' href='/style.css')
+    script(src='/login.js')
+
+  body
+    header
+      h1 メッセージボード
+
+    main
+      p あなたのログインネームを入力ください。
+
+      form(action='javascript:void(0);')
+        .form-group
+          label(for='id_input') Login name:
+          input#id_input(type='text')
+        button(type='submit') 送信

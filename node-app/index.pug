@@ -1,0 +1,26 @@
+include data_item
+doctype
+html(lang='ja')
+  head
+    meta(charset='utf-8')
+    title= title
+    link(type='text/css' href='/style.css' rel='stylesheet')
+
+  body.container.mx-auto.px-4
+    header
+      h1.display-4= title
+    main
+      p= content
+      table
+        thead
+          tr
+            td 伝言です！
+        tbody
+          tr
+            td= data.msg
+      p your last message: #{cookieData}
+      form(method='post' action='/')
+        .form-group
+          label(for='msg') MESSAGE
+          input#msg.form-control(type='text' name='msg')
+        button(type='submit') 送信

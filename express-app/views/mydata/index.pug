@@ -1,0 +1,8 @@
+extends ../layout
+
+block content
+  table
+    each user in content
+      tr
+        th= user.id
+        td= user.name

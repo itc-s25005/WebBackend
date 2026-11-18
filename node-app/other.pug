@@ -1,0 +1,16 @@
+include data_item
+doctype
+html(lang='ja')
+  head
+    meta(charset='utf-8')
+    title= title
+    link(rel='stylesheet' href='/style.css')
+
+  body.container.mx-auto.px-4
+    header
+      h1.display-4= title
+    main
+      p= content
+      - let id = 0
+      each val, key in data
+        +dataRow(++id, key, val)

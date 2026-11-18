@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+
+@import "node_modules/tailwindcss/dist/lib.d.mts";
+
+* {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+body {
+    @apply container mx-auto px-4;
+}
+
+header h1 {
+    @apply text-6xl/16 font-light mb-2;
+}
+
+p {
+    @apply mb-4;
+}
+
+.form-group label {
+    @apply inline-block cursor-default;
+}
+
+.form-group input[type='text'] {
+    @apply block py-1.5 px-3 w-full border border-gray-200 rounded-md bg-clip-padding
+    bg-white text-black cursor-text appearance-none outline-none;
+}
+
+button[type="submit"] {
+    @apply py-1.5 px-3 border-2 border-blue-500 rounded-md text-white bg-blue-500
+    cursor-pointer select-none transition duration-150 ease-in-out hover:bg-blue-700;
+}
+
+table {
+    @apply text-base/6 font-normal w-full mb-4 border-collapse caption-bottom normal-case;
+}
+
+th {
+    @apply text-black bg-white font-bold text-left align-top w-1/4 p-2 border-b
+    border-gray-200;
+}
+
+td {
+    @apply text-black bg-white text-left align-top p-2 border-b border-gray-200;
+}

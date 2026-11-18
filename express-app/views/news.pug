@@ -1,0 +1,7 @@
+extends layout
+
+block content
+  ol
+    each news in content
+      li
+        a(href=news.link target='_blank')= news.title
